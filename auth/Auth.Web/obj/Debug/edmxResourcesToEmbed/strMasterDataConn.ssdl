@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MasterDataSpace.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'MasterDATA.dbo.vw_WEP_s_SchoolLearners' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_WEP_s_SchoolLearners">
+    <Key>
+      <PropertyRef Name="AccessionNo" />
+      <PropertyRef Name="LearnerID" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FullName" />
+      <PropertyRef Name="FullNameSurName" />
+      <PropertyRef Name="Grade" />
+      <PropertyRef Name="TheDate" />
+      <PropertyRef Name="District" />
+      <PropertyRef Name="SchoolName" />
+    </Key>
+    <Property Name="AccessionNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LearnerID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="IDNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Title" Type="nvarchar" MaxLength="10" />
+    <Property Name="FName" Type="nvarchar" MaxLength="70" />
+    <Property Name="SecondName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="70" />
+    <Property Name="SName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="121" Nullable="false" />
+    <Property Name="FullNameSurName" Type="nvarchar" MaxLength="171" Nullable="false" />
+    <Property Name="Initials" Type="nvarchar" MaxLength="10" />
+    <Property Name="BirthDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Race" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="20" />
+    <Property Name="Provincial" Type="nvarchar(max)" />
+    <Property Name="Citizenship" Type="nvarchar" MaxLength="50" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="HomeLanguage" Type="int" />
+    <Property Name="InstructionLanguage" Type="int" />
+    <Property Name="PreferredLanguage" Type="int" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="70" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="70" />
+    <Property Name="Address3" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddressCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Guardian" Type="nvarchar" MaxLength="100" />
+    <Property Name="Tel1Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="Tel1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Tel2Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="Tel2" Type="nvarchar" MaxLength="25" />
+    <Property Name="Tel3Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="Tel3" Type="nvarchar" MaxLength="25" />
+    <Property Name="Religion" Type="nvarchar" MaxLength="50" />
+    <Property Name="GradeYears" Type="int" />
+    <Property Name="PhaseYears" Type="tinyint" />
+    <Property Name="SchoolProvince" Type="nvarchar" MaxLength="50" />
+    <Property Name="Class" Type="int" />
+    <Property Name="Disciplinary" Type="nvarchar(max)" />
+    <Property Name="PreviousSchool" Type="nvarchar" MaxLength="70" />
+    <Property Name="SchoolAddress1" Type="nvarchar" MaxLength="70" />
+    <Property Name="SchoolAddress2" Type="nvarchar" MaxLength="70" />
+    <Property Name="SchoolAddress3" Type="nvarchar" MaxLength="50" />
+    <Property Name="SchoolCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="PreviousSchoolProvince" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateLeft" Type="nvarchar" MaxLength="50" />
+    <Property Name="TheDate" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="LuritsFlag" Type="int" />
+    <Property Name="LuritsNumber" Type="float" />
+    <Property Name="LuritsStatus" Type="nvarchar" MaxLength="200" />
+    <Property Name="EmisCode" Type="int" />
+    <Property Name="Circuit" Type="nvarchar" MaxLength="150" />
+    <Property Name="District" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="SchoolName" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MasterDataSpaceStoreContainer">
+    <EntitySet Name="vw_WEP_s_SchoolLearners" EntityType="Self.vw_WEP_s_SchoolLearners" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_WEP_s_SchoolLearners].[AccessionNo] AS [AccessionNo], 
+    [vw_WEP_s_SchoolLearners].[LearnerID] AS [LearnerID], 
+    [vw_WEP_s_SchoolLearners].[ID] AS [ID], 
+    [vw_WEP_s_SchoolLearners].[IDNo] AS [IDNo], 
+    [vw_WEP_s_SchoolLearners].[Title] AS [Title], 
+    [vw_WEP_s_SchoolLearners].[FName] AS [FName], 
+    [vw_WEP_s_SchoolLearners].[SecondName] AS [SecondName], 
+    [vw_WEP_s_SchoolLearners].[NickName] AS [NickName], 
+    [vw_WEP_s_SchoolLearners].[SName] AS [SName], 
+    [vw_WEP_s_SchoolLearners].[FullName] AS [FullName], 
+    [vw_WEP_s_SchoolLearners].[FullNameSurName] AS [FullNameSurName], 
+    [vw_WEP_s_SchoolLearners].[Initials] AS [Initials], 
+    [vw_WEP_s_SchoolLearners].[BirthDate] AS [BirthDate], 
+    [vw_WEP_s_SchoolLearners].[Race] AS [Race], 
+    [vw_WEP_s_SchoolLearners].[Gender] AS [Gender], 
+    [vw_WEP_s_SchoolLearners].[Provincial] AS [Provincial], 
+    [vw_WEP_s_SchoolLearners].[Citizenship] AS [Citizenship], 
+    [vw_WEP_s_SchoolLearners].[Grade] AS [Grade], 
+    [vw_WEP_s_SchoolLearners].[HomeLanguage] AS [HomeLanguage], 
+    [vw_WEP_s_SchoolLearners].[InstructionLanguage] AS [InstructionLanguage], 
+    [vw_WEP_s_SchoolLearners].[PreferredLanguage] AS [PreferredLanguage], 
+    [vw_WEP_s_SchoolLearners].[Address1] AS [Address1], 
+    [vw_WEP_s_SchoolLearners].[Address2] AS [Address2], 
+    [vw_WEP_s_SchoolLearners].[Address3] AS [Address3], 
+    [vw_WEP_s_SchoolLearners].[AddressCode] AS [AddressCode], 
+    [vw_WEP_s_SchoolLearners].[Guardian] AS [Guardian], 
+    [vw_WEP_s_SchoolLearners].[Tel1Code] AS [Tel1Code], 
+    [vw_WEP_s_SchoolLearners].[Tel1] AS [Tel1], 
+    [vw_WEP_s_SchoolLearners].[Tel2Code] AS [Tel2Code], 
+    [vw_WEP_s_SchoolLearners].[Tel2] AS [Tel2], 
+    [vw_WEP_s_SchoolLearners].[Tel3Code] AS [Tel3Code], 
+    [vw_WEP_s_SchoolLearners].[Tel3] AS [Tel3], 
+    [vw_WEP_s_SchoolLearners].[Religion] AS [Religion], 
+    [vw_WEP_s_SchoolLearners].[GradeYears] AS [GradeYears], 
+    [vw_WEP_s_SchoolLearners].[PhaseYears] AS [PhaseYears], 
+    [vw_WEP_s_SchoolLearners].[SchoolProvince] AS [SchoolProvince], 
+    [vw_WEP_s_SchoolLearners].[Class] AS [Class], 
+    [vw_WEP_s_SchoolLearners].[Disciplinary] AS [Disciplinary], 
+    [vw_WEP_s_SchoolLearners].[PreviousSchool] AS [PreviousSchool], 
+    [vw_WEP_s_SchoolLearners].[SchoolAddress1] AS [SchoolAddress1], 
+    [vw_WEP_s_SchoolLearners].[SchoolAddress2] AS [SchoolAddress2], 
+    [vw_WEP_s_SchoolLearners].[SchoolAddress3] AS [SchoolAddress3], 
+    [vw_WEP_s_SchoolLearners].[SchoolCode] AS [SchoolCode], 
+    [vw_WEP_s_SchoolLearners].[PreviousSchoolProvince] AS [PreviousSchoolProvince], 
+    [vw_WEP_s_SchoolLearners].[DateLeft] AS [DateLeft], 
+    [vw_WEP_s_SchoolLearners].[TheDate] AS [TheDate], 
+    [vw_WEP_s_SchoolLearners].[LuritsFlag] AS [LuritsFlag], 
+    [vw_WEP_s_SchoolLearners].[LuritsNumber] AS [LuritsNumber], 
+    [vw_WEP_s_SchoolLearners].[LuritsStatus] AS [LuritsStatus], 
+    [vw_WEP_s_SchoolLearners].[EmisCode] AS [EmisCode], 
+    [vw_WEP_s_SchoolLearners].[Circuit] AS [Circuit], 
+    [vw_WEP_s_SchoolLearners].[District] AS [District], 
+    [vw_WEP_s_SchoolLearners].[SchoolName] AS [SchoolName]
+    FROM [dbo].[vw_WEP_s_SchoolLearners] AS [vw_WEP_s_SchoolLearners]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

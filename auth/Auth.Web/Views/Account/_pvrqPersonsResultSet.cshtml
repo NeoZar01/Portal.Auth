@@ -1,0 +1,73 @@
+﻿@using Identity2.Models
+@using PagedList.Mvc
+@model PersonViewModel
+
+@{ 
+    var rownum = 1;
+}
+
+<div class="col-md-12">
+    <table class="table table-condensed table-responsive table-hover">
+        <tr>
+            <td><small># &nbsp; Full Name</small></td>
+            <td><small></small></td>
+            <td><small></small></td>
+            <td><small>Known As</small></td>
+            <td><small>Position</small></td>
+            <td class="text-left"><small>Last Date Modified</small></td>
+            <td><small>EmisCode</small></td>
+        </tr>
+        @foreach(var person in Model.Persons)
+        {
+            <tr>
+                <td><small>@(rownum). &nbsp; @string.Concat(person.FirstName , " " ,  @person.LastName).ToLower()</small></td>
+                <td>
+                    <img src="~/Content/Images/ajax-loader.gif" id="load_user_loading_anim_icon" style="display:none; width:16px; height:16px " />
+                    <small>
+                        @Ajax.ActionLink(" ", "ViewUserDetailsReadOnlyAsync", "Account", new { id = person.EmisCode },
+                                        ajaxOptions: new AjaxOptions
+                                        {
+                                            UpdateTargetId = "Person_Search_ResultSet",
+                                            InsertionMode = InsertionMode.Replace,
+                                            HttpMethod = "GET",
+                                            LoadingElementId = "load_user_loading_anim_icon"
+                                        }, htmlAttributes: new { @style = "text-align:center", @class = "glyphicon glyphicon-user" })
+                    </small>
+                </td>
+                <td>
+                    <small>
+                        @Ajax.ActionLink(" ", "ViewUserDetailsReadOnlyAsync", "Account", new { id = person.EmisCode },
+                                        ajaxOptions: new AjaxOptions
+                                        {
+                                            UpdateTargetId = "Person_Search_ResultSet",
+                                            InsertionMode = InsertionMode.Replace,
+                                            HttpMethod = "GET",
+                                            LoadingElementId = "load_user_loading_anim_icon"
+                                        }, htmlAttributes: new { @style = "text-align:center", @class = "glyphicon glyphicon-pencil" })
+                    </small>
+                </td>
+                <td class=""><small>@(person.MaidenName.ToLower())</small></td>
+               <td><small>@(person.Position)</small></td>
+                <td class="text-left"><small>@(person.LastModifiedDate)</small></td>
+                <td><small>@(person.EmisCode)</small></td>
+            </tr>
+
+            rownum += 1;
+        }
+    </table>
+    <div class="col-md-12">
+        <br />
+        Page <img src="~/Content/Images/ajax-loader.gif" id="search_ajax_loading_anim_icon2" style="display:none; width:20px; height:20px " />  @(Model.Persons.PageCount < Model.Persons.PageNumber ? 0 : Model.Persons.PageNumber ) of @Model.Persons.PageCount
+        @Html.PagedListPager(Model.Persons, page => Url.Action("SearchPerson", "Account", new { page, keyword = ViewBag.keyword }),
+        PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions()
+        {
+            HttpMethod = "GET",
+            LoadingElementId = "search_ajax_loading_anim_icon2",
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "Person_Search_ResultSet"
+        }))
+    </div>
+    @{ 
+        rownum = 1;
+     }
+</div>

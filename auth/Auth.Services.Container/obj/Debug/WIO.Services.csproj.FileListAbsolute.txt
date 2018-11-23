@@ -1,0 +1,11 @@
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe.config
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.pdb
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.exe
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.pdb
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\EduDbRespositoryLayer.exe
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\PagedList.dll
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\EduDbRespositoryLayer.pdb
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\PagedList.xml

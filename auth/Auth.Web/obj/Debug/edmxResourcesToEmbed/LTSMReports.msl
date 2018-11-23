@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LTSMModelStoreContainer" CdmEntityContainer="Ltsm">
+    <EntitySetMapping Name="vwLmP_Ord_CountPrPublisher">
+      <EntityTypeMapping TypeName="LTSMModel.vwLmP_Ord_CountPrPublisher">
+        <MappingFragment StoreEntitySet="vwLmP_Ord_CountPrPublisher">
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="PubId" ColumnName="PubId" />
+          <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+          <ScalarProperty Name="SubjIdOff" ColumnName="SubjIdOff" />
+          <ScalarProperty Name="EiCircuit" ColumnName="EiCircuit" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="IsbnCnt" ColumnName="IsbnCnt" />
+          <ScalarProperty Name="LrnEnrTotal" ColumnName="LrnEnrTotal" />
+          <ScalarProperty Name="BookOrdQty" ColumnName="BookOrdQty" />
+          <ScalarProperty Name="consLrnEnrTotal" ColumnName="consLrnEnrTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwLmP_ord_PubWithOrd">
+      <EntityTypeMapping TypeName="LTSMModel.vwLmP_ord_PubWithOrd">
+        <MappingFragment StoreEntitySet="vwLmP_ord_PubWithOrd">
+          <ScalarProperty Name="PubId" ColumnName="PubId" />
+          <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+          <ScalarProperty Name="EiCircuit" ColumnName="EiCircuit" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="NoOfItms" ColumnName="NoOfItms" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwLmP_order_ProvOrderPerPub">
+      <EntityTypeMapping TypeName="LTSMModel.vwLmP_order_ProvOrderPerPub">
+        <MappingFragment StoreEntitySet="vwLmP_order_ProvOrderPerPub">
+          <ScalarProperty Name="NatEmis" ColumnName="NatEmis" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="LrnEnrUnit" ColumnName="LrnEnrUnit" />
+          <ScalarProperty Name="Town" ColumnName="Town" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NearestTown" ColumnName="NearestTown" />
+          <ScalarProperty Name="CensusArea" ColumnName="CensusArea" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="EmisOfficer" ColumnName="EmisOfficer" />
+          <ScalarProperty Name="SchoolIdenityName" ColumnName="SchoolIdenityName" />
+          <ScalarProperty Name="GIS_Lat" ColumnName="GIS_Lat" />
+          <ScalarProperty Name="GIS_Long" ColumnName="GIS_Long" />
+          <ScalarProperty Name="GIS_ERROR" ColumnName="GIS_ERROR" />
+          <ScalarProperty Name="GISSource" ColumnName="GISSource" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="InternetAccess" ColumnName="InternetAccess" />
+          <ScalarProperty Name="PostAddress0" ColumnName="PostAddress0" />
+          <ScalarProperty Name="PostAddress0No" ColumnName="PostAddress0No" />
+          <ScalarProperty Name="PostAddress1" ColumnName="PostAddress1" />
+          <ScalarProperty Name="PostAddress2" ColumnName="PostAddress2" />
+          <ScalarProperty Name="PostAddress3" ColumnName="PostAddress3" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="EICircuit" ColumnName="EICircuit" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="SName" ColumnName="SName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="PersalNumber" ColumnName="PersalNumber" />
+          <ScalarProperty Name="ManagementPosition" ColumnName="ManagementPosition" />
+          <ScalarProperty Name="ReqID" ColumnName="ReqID" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="ReqDate" ColumnName="ReqDate" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="ReqStatus" ColumnName="ReqStatus" />
+          <ScalarProperty Name="Ordered" ColumnName="Ordered" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="PubId" ColumnName="PubId" />
+          <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SASAMSWarehouseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SASAMSWarehouse.dbo.Settings' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Settings">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Importday" />
+      <PropertyRef Name="ImportyYr" />
+      <PropertyRef Name="ImportMon" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="StatusI" Type="nvarchar" MaxLength="5" />
+    <Property Name="Reports" Type="nvarchar" MaxLength="10" />
+    <Property Name="StatusC" Type="nvarchar" MaxLength="5" />
+    <Property Name="FontColour" Type="float" />
+    <Property Name="IPicture" Type="image" />
+    <Property Name="LearnerPhoto" Type="nvarchar" MaxLength="200" />
+    <Property Name="LearnerPhotographFolder" Type="nvarchar(max)" />
+    <Property Name="EducatorPhotographFolder" Type="nvarchar" MaxLength="200" />
+    <Property Name="EmisCode" Type="int" />
+    <Property Name="ImportYear" Type="int" />
+    <Property Name="ImportMonth" Type="int" />
+    <Property Name="Importday" Type="datetime" Nullable="false" />
+    <Property Name="ImportyYr" Type="datetime" Nullable="false" />
+    <Property Name="ImportMon" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SASAMSWarehouseModelStoreContainer">
+    <EntitySet Name="Settings" EntityType="Self.Settings" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Settings].[Id] AS [Id], 
+    [Settings].[StatusI] AS [StatusI], 
+    [Settings].[Reports] AS [Reports], 
+    [Settings].[StatusC] AS [StatusC], 
+    [Settings].[FontColour] AS [FontColour], 
+    [Settings].[IPicture] AS [IPicture], 
+    [Settings].[LearnerPhoto] AS [LearnerPhoto], 
+    [Settings].[LearnerPhotographFolder] AS [LearnerPhotographFolder], 
+    [Settings].[EducatorPhotographFolder] AS [EducatorPhotographFolder], 
+    [Settings].[EmisCode] AS [EmisCode], 
+    [Settings].[ImportYear] AS [ImportYear], 
+    [Settings].[ImportMonth] AS [ImportMonth], 
+    [Settings].[Importday] AS [Importday], 
+    [Settings].[ImportyYr] AS [ImportyYr], 
+    [Settings].[ImportMon] AS [ImportMon]
+    FROM [dbo].[Settings] AS [Settings]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

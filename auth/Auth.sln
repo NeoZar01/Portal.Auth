@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.Services.Container", "Auth.Services.Container\Auth.Services.Container.csproj", "{04C9DF90-3669-404A-B45F-52CF8C64F6A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.Web", "Auth.Web\Auth.Web.csproj", "{F9757DB1-12FB-4D04-A45E-BAD1C27E63DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{620CDBC6-BB7D-477A-8FAF-48944483DF1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04C9DF90-3669-404A-B45F-52CF8C64F6A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04C9DF90-3669-404A-B45F-52CF8C64F6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04C9DF90-3669-404A-B45F-52CF8C64F6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04C9DF90-3669-404A-B45F-52CF8C64F6A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9757DB1-12FB-4D04-A45E-BAD1C27E63DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9757DB1-12FB-4D04-A45E-BAD1C27E63DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9757DB1-12FB-4D04-A45E-BAD1C27E63DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9757DB1-12FB-4D04-A45E-BAD1C27E63DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04C9DF90-3669-404A-B45F-52CF8C64F6A2} = {620CDBC6-BB7D-477A-8FAF-48944483DF1A}
+		{F9757DB1-12FB-4D04-A45E-BAD1C27E63DF} = {620CDBC6-BB7D-477A-8FAF-48944483DF1A}
+	EndGlobalSection
+EndGlobal

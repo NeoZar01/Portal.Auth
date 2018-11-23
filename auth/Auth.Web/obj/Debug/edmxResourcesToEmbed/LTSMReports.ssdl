@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LTSMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'LTSM.dbo.vwLmP_Ord_CountPrPublisher' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwLmP_Ord_CountPrPublisher">
+    <Key>
+      <PropertyRef Name="ISBN" />
+      <PropertyRef Name="PubId" />
+      <PropertyRef Name="SubjIdOff" />
+    </Key>
+    <Property Name="ISBN" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="PubId" Type="int" Nullable="false" />
+    <Property Name="Publisher" Type="nvarchar" MaxLength="255" />
+    <Property Name="SubjIdOff" Type="int" Nullable="false" />
+    <Property Name="EiCircuit" Type="nvarchar" MaxLength="255" />
+    <Property Name="Manager" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsbnCnt" Type="int" />
+    <Property Name="LrnEnrTotal" Type="int" />
+    <Property Name="BookOrdQty" Type="int" />
+    <Property Name="consLrnEnrTotal" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'LTSM.dbo.vwLmP_ord_PubWithOrd' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwLmP_ord_PubWithOrd">
+    <Key>
+      <PropertyRef Name="PubId" />
+    </Key>
+    <Property Name="PubId" Type="int" Nullable="false" />
+    <Property Name="Publisher" Type="nvarchar" MaxLength="255" />
+    <Property Name="EiCircuit" Type="nvarchar" MaxLength="255" />
+    <Property Name="Manager" Type="nvarchar" MaxLength="200" />
+    <Property Name="NoOfItms" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'LTSM.dbo.vwLmP_order_ProvOrderPerPub' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwLmP_order_ProvOrderPerPub">
+    <Key>
+      <PropertyRef Name="NatEmis" />
+      <PropertyRef Name="SName" />
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Qty" />
+      <PropertyRef Name="ReqID" />
+      <PropertyRef Name="ReqStatus" />
+      <PropertyRef Name="ISBN" />
+      <PropertyRef Name="PubId" />
+    </Key>
+    <Property Name="NatEmis" Type="int" Nullable="false" />
+    <Property Name="Item" Type="nvarchar" MaxLength="255" />
+    <Property Name="LrnEnrUnit" Type="int" />
+    <Property Name="Town" Type="varchar" MaxLength="23" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="NearestTown" Type="nvarchar" MaxLength="100" />
+    <Property Name="CensusArea" Type="nvarchar" MaxLength="150" />
+    <Property Name="District" Type="nvarchar" MaxLength="150" />
+    <Property Name="EmisOfficer" Type="int" />
+    <Property Name="SchoolIdenityName" Type="nvarchar" MaxLength="250" />
+    <Property Name="GIS_Lat" Type="float" />
+    <Property Name="GIS_Long" Type="float" />
+    <Property Name="GIS_ERROR" Type="nvarchar" MaxLength="255" />
+    <Property Name="GISSource" Type="nvarchar" MaxLength="255" />
+    <Property Name="EMail" Type="nvarchar" MaxLength="210" />
+    <Property Name="Telephone1" Type="nvarchar" MaxLength="25" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="25" />
+    <Property Name="InternetAccess" Type="nvarchar" MaxLength="10" />
+    <Property Name="PostAddress0" Type="nvarchar" MaxLength="50" />
+    <Property Name="PostAddress0No" Type="nvarchar" MaxLength="10" />
+    <Property Name="PostAddress1" Type="nvarchar" MaxLength="200" />
+    <Property Name="PostAddress2" Type="nvarchar" MaxLength="200" />
+    <Property Name="PostAddress3" Type="nvarchar" MaxLength="200" />
+    <Property Name="PostCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="EICircuit" Type="nvarchar" MaxLength="255" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="255" />
+    <Property Name="FName" Type="nvarchar" MaxLength="60" />
+    <Property Name="SName" Type="nvarchar" MaxLength="70" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+    <Property Name="PersalNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="ManagementPosition" Type="nvarchar" MaxLength="40" />
+    <Property Name="ReqID" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="TotalPrice" Type="smallmoney" />
+    <Property Name="Manager" Type="nvarchar" MaxLength="200" />
+    <Property Name="ReqDate" Type="datetime" />
+    <Property Name="OrderDate" Type="datetime" />
+    <Property Name="DeliveryDate" Type="datetime" />
+    <Property Name="ReqStatus" Type="tinyint" Nullable="false" />
+    <Property Name="Ordered" Type="int" />
+    <Property Name="ISBN" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="BatchID" Type="int" />
+    <Property Name="PubId" Type="int" Nullable="false" />
+    <Property Name="Publisher" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="LTSMModelStoreContainer">
+    <EntitySet Name="vwLmP_Ord_CountPrPublisher" EntityType="Self.vwLmP_Ord_CountPrPublisher" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vwLmP_Ord_CountPrPublisher].[ISBN] AS [ISBN], 
+    [vwLmP_Ord_CountPrPublisher].[PubId] AS [PubId], 
+    [vwLmP_Ord_CountPrPublisher].[Publisher] AS [Publisher], 
+    [vwLmP_Ord_CountPrPublisher].[SubjIdOff] AS [SubjIdOff], 
+    [vwLmP_Ord_CountPrPublisher].[EiCircuit] AS [EiCircuit], 
+    [vwLmP_Ord_CountPrPublisher].[Manager] AS [Manager], 
+    [vwLmP_Ord_CountPrPublisher].[IsbnCnt] AS [IsbnCnt], 
+    [vwLmP_Ord_CountPrPublisher].[LrnEnrTotal] AS [LrnEnrTotal], 
+    [vwLmP_Ord_CountPrPublisher].[BookOrdQty] AS [BookOrdQty], 
+    [vwLmP_Ord_CountPrPublisher].[consLrnEnrTotal] AS [consLrnEnrTotal]
+    FROM [dbo].[vwLmP_Ord_CountPrPublisher] AS [vwLmP_Ord_CountPrPublisher]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwLmP_ord_PubWithOrd" EntityType="Self.vwLmP_ord_PubWithOrd" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vwLmP_ord_PubWithOrd].[PubId] AS [PubId], 
+    [vwLmP_ord_PubWithOrd].[Publisher] AS [Publisher], 
+    [vwLmP_ord_PubWithOrd].[EiCircuit] AS [EiCircuit], 
+    [vwLmP_ord_PubWithOrd].[Manager] AS [Manager], 
+    [vwLmP_ord_PubWithOrd].[NoOfItms] AS [NoOfItms]
+    FROM [dbo].[vwLmP_ord_PubWithOrd] AS [vwLmP_ord_PubWithOrd]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwLmP_order_ProvOrderPerPub" EntityType="Self.vwLmP_order_ProvOrderPerPub" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vwLmP_order_ProvOrderPerPub].[NatEmis] AS [NatEmis], 
+    [vwLmP_order_ProvOrderPerPub].[Item] AS [Item], 
+    [vwLmP_order_ProvOrderPerPub].[LrnEnrUnit] AS [LrnEnrUnit], 
+    [vwLmP_order_ProvOrderPerPub].[Town] AS [Town], 
+    [vwLmP_order_ProvOrderPerPub].[Description] AS [Description], 
+    [vwLmP_order_ProvOrderPerPub].[NearestTown] AS [NearestTown], 
+    [vwLmP_order_ProvOrderPerPub].[CensusArea] AS [CensusArea], 
+    [vwLmP_order_ProvOrderPerPub].[District] AS [District], 
+    [vwLmP_order_ProvOrderPerPub].[EmisOfficer] AS [EmisOfficer], 
+    [vwLmP_order_ProvOrderPerPub].[SchoolIdenityName] AS [SchoolIdenityName], 
+    [vwLmP_order_ProvOrderPerPub].[GIS_Lat] AS [GIS_Lat], 
+    [vwLmP_order_ProvOrderPerPub].[GIS_Long] AS [GIS_Long], 
+    [vwLmP_order_ProvOrderPerPub].[GIS_ERROR] AS [GIS_ERROR], 
+    [vwLmP_order_ProvOrderPerPub].[GISSource] AS [GISSource], 
+    [vwLmP_order_ProvOrderPerPub].[EMail] AS [EMail], 
+    [vwLmP_order_ProvOrderPerPub].[Telephone1] AS [Telephone1], 
+    [vwLmP_order_ProvOrderPerPub].[Fax] AS [Fax], 
+    [vwLmP_order_ProvOrderPerPub].[InternetAccess] AS [InternetAccess], 
+    [vwLmP_order_ProvOrderPerPub].[PostAddress0] AS [PostAddress0], 
+    [vwLmP_order_ProvOrderPerPub].[PostAddress0No] AS [PostAddress0No], 
+    [vwLmP_order_ProvOrderPerPub].[PostAddress1] AS [PostAddress1], 
+    [vwLmP_order_ProvOrderPerPub].[PostAddress2] AS [PostAddress2], 
+    [vwLmP_order_ProvOrderPerPub].[PostAddress3] AS [PostAddress3], 
+    [vwLmP_order_ProvOrderPerPub].[PostCode] AS [PostCode], 
+    [vwLmP_order_ProvOrderPerPub].[EICircuit] AS [EICircuit], 
+    [vwLmP_order_ProvOrderPerPub].[Telephone] AS [Telephone], 
+    [vwLmP_order_ProvOrderPerPub].[FName] AS [FName], 
+    [vwLmP_order_ProvOrderPerPub].[SName] AS [SName], 
+    [vwLmP_order_ProvOrderPerPub].[Id] AS [Id], 
+    [vwLmP_order_ProvOrderPerPub].[Qty] AS [Qty], 
+    [vwLmP_order_ProvOrderPerPub].[PersalNumber] AS [PersalNumber], 
+    [vwLmP_order_ProvOrderPerPub].[ManagementPosition] AS [ManagementPosition], 
+    [vwLmP_order_ProvOrderPerPub].[ReqID] AS [ReqID], 
+    [vwLmP_order_ProvOrderPerPub].[TotalPrice] AS [TotalPrice], 
+    [vwLmP_order_ProvOrderPerPub].[Manager] AS [Manager], 
+    [vwLmP_order_ProvOrderPerPub].[ReqDate] AS [ReqDate], 
+    [vwLmP_order_ProvOrderPerPub].[OrderDate] AS [OrderDate], 
+    [vwLmP_order_ProvOrderPerPub].[DeliveryDate] AS [DeliveryDate], 
+    [vwLmP_order_ProvOrderPerPub].[ReqStatus] AS [ReqStatus], 
+    [vwLmP_order_ProvOrderPerPub].[Ordered] AS [Ordered], 
+    [vwLmP_order_ProvOrderPerPub].[ISBN] AS [ISBN], 
+    [vwLmP_order_ProvOrderPerPub].[BatchID] AS [BatchID], 
+    [vwLmP_order_ProvOrderPerPub].[PubId] AS [PubId], 
+    [vwLmP_order_ProvOrderPerPub].[Publisher] AS [Publisher]
+    FROM [dbo].[vwLmP_order_ProvOrderPerPub] AS [vwLmP_order_ProvOrderPerPub]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

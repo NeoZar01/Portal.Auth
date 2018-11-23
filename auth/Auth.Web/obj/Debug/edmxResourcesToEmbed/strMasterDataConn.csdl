@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MasterDataSpace" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="vw_WEP_s_SchoolLearners">
+    <Key>
+      <PropertyRef Name="AccessionNo" />
+      <PropertyRef Name="LearnerID" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FullName" />
+      <PropertyRef Name="FullNameSurName" />
+      <PropertyRef Name="Grade" />
+      <PropertyRef Name="TheDate" />
+      <PropertyRef Name="District" />
+      <PropertyRef Name="SchoolName" />
+    </Key>
+    <Property Name="AccessionNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LearnerID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="IDNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="FName" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="SecondName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NickName" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="SName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="121" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FullNameSurName" Type="String" MaxLength="171" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Initials" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="BirthDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Race" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Provincial" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Citizenship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Grade" Type="Int32" Nullable="false" />
+    <Property Name="HomeLanguage" Type="Int32" />
+    <Property Name="InstructionLanguage" Type="Int32" />
+    <Property Name="PreferredLanguage" Type="Int32" />
+    <Property Name="Address1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="Address3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddressCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Guardian" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Tel1Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Tel1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Tel2Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Tel2" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Tel3Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Tel3" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Religion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GradeYears" Type="Int32" />
+    <Property Name="PhaseYears" Type="Byte" />
+    <Property Name="SchoolProvince" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="Int32" />
+    <Property Name="Disciplinary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PreviousSchool" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolAddress1" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolAddress2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolAddress3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PreviousSchoolProvince" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateLeft" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TheDate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LuritsFlag" Type="Int32" />
+    <Property Name="LuritsNumber" Type="Double" />
+    <Property Name="LuritsStatus" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="EmisCode" Type="Int32" />
+    <Property Name="Circuit" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SchoolName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MasterDATAObjectsAsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="vw_WEP_s_SchoolLearners" EntityType="Self.vw_WEP_s_SchoolLearners" />
+  </EntityContainer>
+</Schema>

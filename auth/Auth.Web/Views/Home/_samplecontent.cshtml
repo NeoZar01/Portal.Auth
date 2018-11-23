@@ -1,0 +1,31 @@
+﻿@model Identity2.Models.HomeBootViewModel
+
+@{
+    
+    var rwn = 1;
+    
+}
+
+<div class="col-md-12">
+
+    <table class="table table-condensed table-responsive table-hover">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Grade Repeat Years</th>
+        </tr>
+        @foreach (var l in Model.getAsEnrolledList)
+        {
+            <tr>
+                <td>@rwn</td>
+                <td>@l.FullNameSurName</td>
+                <td>@l.Grade</td>
+                <td>@l.GradeYears</td>
+        </tr>
+            rwn += 1;
+        }
+    </table>
+
+    @{ rwn = 1; }
+</div>

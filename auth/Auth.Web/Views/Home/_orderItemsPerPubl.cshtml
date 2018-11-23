@@ -1,0 +1,34 @@
+﻿@model  Identity2.Models.OrderListFigures
+
+<div class="col-md-12" id="circ_ord_publ_dt">
+    <table class="col-md-12 table table-condensed table-hover table-responsive">
+        <tr>
+            <th><br />PubId</th>
+            <th><br />Publisher</th>
+            <th>Order<br />Items</th>
+            <th></th>
+        </tr>
+
+        @foreach (var p in Model.orderPerPublisher)
+        {
+            <tr>
+                <td>@p.PubId</td>
+                <td>@p.Publisher</td>
+                <td>@p.NoOfItms</td>
+                <td>
+                    @Ajax.ActionLink("View", "PubOrderPublish", "Home", new { pId = p.PubId },
+                                     new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "circ_ord_publ_dt", InsertionMode = InsertionMode.Replace },
+                                     new Dictionary<string, object>
+                            {
+                            { "data-toggle", "modal" },
+                            { "data-target", "#myModal" }
+                            })
+                    
+                </td>
+            </tr>
+
+        }
+
+    </table>
+
+</div>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LTSMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="vwLmP_Ord_CountPrPublisher">
+    <Key>
+      <PropertyRef Name="ISBN" />
+      <PropertyRef Name="PubId" />
+      <PropertyRef Name="SubjIdOff" />
+    </Key>
+    <Property Name="ISBN" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PubId" Type="Int32" Nullable="false" />
+    <Property Name="Publisher" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SubjIdOff" Type="Int32" Nullable="false" />
+    <Property Name="EiCircuit" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Manager" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsbnCnt" Type="Int32" />
+    <Property Name="LrnEnrTotal" Type="Int32" />
+    <Property Name="BookOrdQty" Type="Int32" />
+    <Property Name="consLrnEnrTotal" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vwLmP_ord_PubWithOrd">
+    <Key>
+      <PropertyRef Name="PubId" />
+    </Key>
+    <Property Name="PubId" Type="Int32" Nullable="false" />
+    <Property Name="Publisher" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EiCircuit" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Manager" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NoOfItms" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vwLmP_order_ProvOrderPerPub">
+    <Key>
+      <PropertyRef Name="NatEmis" />
+      <PropertyRef Name="SName" />
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Qty" />
+      <PropertyRef Name="ReqID" />
+      <PropertyRef Name="ReqStatus" />
+      <PropertyRef Name="ISBN" />
+      <PropertyRef Name="PubId" />
+    </Key>
+    <Property Name="NatEmis" Type="Int32" Nullable="false" />
+    <Property Name="Item" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LrnEnrUnit" Type="Int32" />
+    <Property Name="Town" Type="String" MaxLength="23" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NearestTown" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CensusArea" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="EmisOfficer" Type="Int32" />
+    <Property Name="SchoolIdenityName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="GIS_Lat" Type="Double" />
+    <Property Name="GIS_Long" Type="Double" />
+    <Property Name="GIS_ERROR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GISSource" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EMail" Type="String" MaxLength="210" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="InternetAccess" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PostAddress0" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PostAddress0No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PostAddress1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PostAddress2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PostAddress3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PostCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="EICircuit" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="SName" Type="String" MaxLength="70" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="PersalNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ManagementPosition" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="ReqID" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="Manager" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ReqDate" Type="DateTime" Precision="3" />
+    <Property Name="OrderDate" Type="DateTime" Precision="3" />
+    <Property Name="DeliveryDate" Type="DateTime" Precision="3" />
+    <Property Name="ReqStatus" Type="Byte" Nullable="false" />
+    <Property Name="Ordered" Type="Int32" />
+    <Property Name="ISBN" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BatchID" Type="Int32" />
+    <Property Name="PubId" Type="Int32" Nullable="false" />
+    <Property Name="Publisher" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Ltsm" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="vwLmP_Ord_CountPrPublisher" EntityType="Self.vwLmP_Ord_CountPrPublisher" />
+    <EntitySet Name="vwLmP_ord_PubWithOrd" EntityType="Self.vwLmP_ord_PubWithOrd" />
+    <EntitySet Name="vwLmP_order_ProvOrderPerPub" EntityType="Self.vwLmP_order_ProvOrderPerPub" />
+  </EntityContainer>
+</Schema>

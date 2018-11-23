@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SASAMSWarehouseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Importday" />
+      <PropertyRef Name="ImportyYr" />
+      <PropertyRef Name="ImportMon" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="StatusI" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Reports" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="StatusC" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="FontColour" Type="Double" />
+    <Property Name="IPicture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="LearnerPhoto" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="LearnerPhotographFolder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EducatorPhotographFolder" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="EmisCode" Type="Int32" />
+    <Property Name="ImportYear" Type="Int32" />
+    <Property Name="ImportMonth" Type="Int32" />
+    <Property Name="Importday" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ImportyYr" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ImportMon" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="SAMSWarehouseDS" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Settings" EntityType="Self.Setting" />
+  </EntityContainer>
+</Schema>

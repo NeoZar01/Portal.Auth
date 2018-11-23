@@ -1,0 +1,167 @@
+﻿@using Identity2.Models
+@model AccountDetailsViewModel
+<div class="row">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#general" aria-controls="general" role="tab" data-toggle="tab"><small>Personal Details</small></a></li>
+            <li role="presentation"><a href="#address" aria-controls="address" role="tab" data-toggle="tab"><small>Address</small></a></li>
+            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><small>Occupation</small></a></li>
+            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><small>Settings </small></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active col-md-12" id="general">
+                <br />
+                <div class="col-md-6">
+                    <table class="table-condensed table-hover table-responsive col-md-12">
+                        <tr>
+                            <td><small><strong>Emis Code</strong></small></td>
+                            <td><small>@(Model.PersonalDetails.EmisCode)</small></td>
+                        </tr>
+                        <tr>
+                            <td><small><strong>Initials</strong></small></td>
+                            <td><small>@(Model.PersonalDetails.Initials)</small></td>
+                        </tr>
+                        <tr>
+                            <td><small><strong>First Name</strong></small></td>
+                            <td><small>@(Model.PersonalDetails.FirstName)</small></td>
+                        </tr>
+
+                        <tr>
+                            <td><small><strong>Middle Name</strong></small></td>
+                            <td><small>@(Model.PersonalDetails.MiddleName)</small></td>
+                        </tr>
+                        <tr>
+                            <td><small><strong>Last Name</strong></small></td>
+                            <td class="text-captilized"><small>@(Model.PersonalDetails.LastName)</small></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <table class="table-condensed table-hover table-responsive col-md-12">
+                        <tr>
+                            <td><small><strong>Preffered Name</strong></small></td>
+                            <td><small>@(Model.PersonalDetails.MaidenName)</small></td>
+                        </tr>
+                        <tr>
+                            <td><small><strong>ID Number</strong></small></td>
+                            <td><small>@(Model.PersonalDetails.IdNo)</small></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="address">
+                <br/>
+                <div class="col-md-12">
+                    <table class="table-hover table-responsive table-condensed col-md-6">
+                        <tr>
+                            <td><small><strong>Home Address</strong> </small></td>
+                            <td class="text-center">@(Model.Address == null ? "" :  Model.Address.HomeAddress)</td>
+                        </tr>
+                        <tr>
+                            <td><small><strong>Branch Name </strong></small></td>
+                            <td class="text-center">@(Model.Address == null ? "" : Model.Address.BranchName)</td>
+                        </tr>
+                        <tr>
+                            <td><small><strong>Street Address </strong></small></td>
+                            <td class="text-center">@(Model.Address == null ? "" : Model.Address.StAddress)</td>
+                        </tr>
+                    </table>
+                    <table class="table-hover table-responsive table-condensed col-md-6" >
+                       <tr>
+                            <td><small><strong>Parent Branch </strong></small></td>
+                            <td class="text-center">@(Model.Address == null ? "" : Model.Address.ParentBranch)</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="messages">
+                <div class="col-md-12">
+                    <br/>
+                    <table class="table-hover table-condensed table-responsive col-md-6"> 
+                        <tr>
+                            <td><small><strong>Position</strong></small></td>
+                            <td class="text-center"><small>@(Model.Position == null ? " " : Model.Position.Position)</small></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="settings">
+                <div class="col-md-12">
+                    <br/>
+                    <div class="col-md-6">
+                        <table class="col-md-12 table-condensed table-hover table-responsive">
+                            <tr>
+                                <td><small><strong>Role</strong></small></td>
+                                <td class="text-center"><small>@(Model.Settings == null ? "No Role Assigned" : Model.Settings.Role)</small></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><small><strong></strong></small></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <table class="col-md-6 table-condensed table-hover table-responsive">
+                        <tr>
+                            <td><small><strong>Active</strong></small></td>
+                            <td class="text-center"><small>@(Model.Settings == null ? "Setting Not Assigned" : (Model.Settings.IsActive == 1 ? "Yes" : "No"))</small></td>
+                        </tr>
+                        <tr>
+                            <td><small><strong>Public</strong></small></td>
+                            <td class="text-center"><small>@(Model.Settings == null ? "Setting Not Assigned" : (Model.Settings.IsPublic == 1 ? "Yes" : "No"))</small></td>
+                        </tr>
+                    </table>
+                    <div class="col-md-6" id="Password_Reset_Console"><br/><br />
+                        @using (Ajax.BeginForm(
+                                      "ResetPassword", 
+                                     "Account",
+                                        new AjaxOptions { HttpMethod = "POST",
+                                                             UpdateTargetId = "Password_Reset_Console",
+                                                             InsertionMode = InsertionMode.Replace,
+                                                             LoadingElementId = "pwdrst_ajax_loading_anim_icon" } , 
+                               htmlAttributes:      new { @class = "col-md-12 panel-default", role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary("", new { @class = "text-danger" })
+                            @Html.TextBoxFor( c => c.Code ,  htmlAttributes: new  {  @style ="display:none"})
+                            @Html.TextBoxFor( c => c.EmisCode, htmlAttributes: new { @style = "display:none" })
+                            <h4>Reset Password Here</h4>
+                            <hr/>
+                            <input type="text" class="form-control" name="Email" id="Email" value="@(Model.Contact == null ? "No Value Found" : Model.Contact.Email)" style="display:none">
+                            <div class="input-group">
+                                <div>
+                                    <input class="form-control" data-val="true" data-val-length="The Password must be at least 6 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="Password" name="Password" type="password" placeholder="Enter Password...">
+                                </div>
+
+                            </div><br />
+                                <div class="input-group">
+                                    <div>
+                                        <input class="form-control" data-val="true" data-val-length="The Password must be at least 6 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="ConfirmPassword" name="ConfirmPassword" type="password" placeholder="Confirm Password...">
+                                    </div>
+                                </div><br />
+                                <div class="col-md-12 input-group-btn  border-bottom-lighter">
+                                    <div class="col-md-10">
+                                    </div>
+                                    @if (Model.Contact == null ?  false : string.IsNullOrEmpty(Model.Contact.Email)) 
+                                    {
+                                                                              
+                                    }
+                                    else
+                                    {
+                                        <div class="col-md-2" style="margin-bottom:3px">
+                                            <button type="submit" class="btn btn-primary btn-sm">  <span class="glyphicon glyphicon-user"></span> &nbsp; Change &nbsp; <img src="~/Content/Images/ajax-loader.gif" id="pwdrst_ajax_loading_anim_icon" style="display:none; width:20px; height:20px " /></button>
+                                        </div>
+                                    }
+                                </div>
+                        }
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,2 @@
+C:\ProgramData\PostSharp\6.0.29\bin.Release\net471\PostSharp.Compiler.Engine.dll
+C:\apps\Auth\Auth.Services.Container\obj\Debug\PostSharp\postsharp.config

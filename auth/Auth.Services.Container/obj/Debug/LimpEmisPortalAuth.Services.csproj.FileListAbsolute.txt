@@ -1,0 +1,48 @@
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe.config
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.pdb
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\EduDbRespositoryLayer.exe
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\PagedList.dll
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\EduDbRespositoryLayer.pdb
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\bin\Debug\PagedList.xml
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\obj\Debug\LimpEmisPortalAuth.Services.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.exe
+C:\Users\Administrator\Downloads\bkvsProj.2017.05\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.pdb
+C:\Users\Administrator\Desktop\Portal.dev\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe.config
+C:\Users\Administrator\Desktop\Portal.dev\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe
+C:\Users\Administrator\Desktop\Portal.dev\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.pdb
+C:\Users\Administrator\Desktop\Portal.dev\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.exe
+C:\Users\Administrator\Desktop\Portal.dev\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.pdb
+C:\Users\Administrator\Desktop\Portal.dev\Identity2\WhoIsOnline.Service\obj\Debug\LimpEmisPortalAuth.Services.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Portal.dev\Source Codes\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe.config
+C:\Users\Administrator\Desktop\Portal.dev\Source Codes\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe
+C:\Users\Administrator\Desktop\Portal.dev\Source Codes\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.pdb
+C:\Users\Administrator\Desktop\Portal.dev\Source Codes\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.exe
+C:\Users\Administrator\Desktop\Portal.dev\Source Codes\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.pdb
+C:\Users\Administrator\Desktop\Portal.dev\Source Codes\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\LimpEmisPortalAuth.Services.csprojResolveAssemblyReference.cache
+C:\Portal.dev\src\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe.config
+C:\Portal.dev\src\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe
+C:\Portal.dev\src\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.pdb
+C:\Portal.dev\src\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\LimpEmisPortalAuth.Services.csprojResolveAssemblyReference.cache
+C:\Portal.dev\src\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.exe
+C:\Portal.dev\src\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.pdb
+C:\Users\NeoL\Desktop\Project.EP\Portal.dev\src\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe.config
+C:\Users\NeoL\Desktop\Project.EP\Portal.dev\src\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe
+C:\Users\NeoL\Desktop\Project.EP\Portal.dev\src\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.pdb
+C:\Users\NeoL\Desktop\Project.EP\Portal.dev\src\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\LimpEmisPortalAuth.Services.csprojResolveAssemblyReference.cache
+C:\Users\NeoL\Desktop\Project.EP\Portal.dev\src\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.exe
+C:\Users\NeoL\Desktop\Project.EP\Portal.dev\src\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.pdb
+C:\POC-Projs\Env.Dev\src\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe.config
+C:\POC-Projs\Env.Dev\src\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe
+C:\POC-Projs\Env.Dev\src\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.pdb
+C:\POC-Projs\Env.Dev\src\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\LimpEmisPortalAuth.Services.csprojResolveAssemblyReference.cache
+C:\POC-Projs\Env.Dev\src\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.exe
+C:\POC-Projs\Env.Dev\src\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.pdb
+G:\General\Home Projects\Net\Quota\Project Repositories\Demos\Security\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe.config
+G:\General\Home Projects\Net\Quota\Project Repositories\Demos\Security\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.exe
+G:\General\Home Projects\Net\Quota\Project Repositories\Demos\Security\Authentication\Identity2\WhoIsOnline.Service\bin\Debug\WhoIsOnline.Service.pdb
+G:\General\Home Projects\Net\Quota\Project Repositories\Demos\Security\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\LimpEmisPortalAuth.Services.csprojResolveAssemblyReference.cache
+G:\General\Home Projects\Net\Quota\Project Repositories\Demos\Security\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.exe
+G:\General\Home Projects\Net\Quota\Project Repositories\Demos\Security\Authentication\Identity2\WhoIsOnline.Service\obj\Debug\WhoIsOnline.Service.pdb

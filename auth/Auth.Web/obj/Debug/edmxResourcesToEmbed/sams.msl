@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SASAMSWarehouseModelStoreContainer" CdmEntityContainer="SAMSWarehouseDS">
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="SASAMSWarehouseModel.Setting">
+        <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StatusI" ColumnName="StatusI" />
+          <ScalarProperty Name="Reports" ColumnName="Reports" />
+          <ScalarProperty Name="StatusC" ColumnName="StatusC" />
+          <ScalarProperty Name="FontColour" ColumnName="FontColour" />
+          <ScalarProperty Name="IPicture" ColumnName="IPicture" />
+          <ScalarProperty Name="LearnerPhoto" ColumnName="LearnerPhoto" />
+          <ScalarProperty Name="LearnerPhotographFolder" ColumnName="LearnerPhotographFolder" />
+          <ScalarProperty Name="EducatorPhotographFolder" ColumnName="EducatorPhotographFolder" />
+          <ScalarProperty Name="EmisCode" ColumnName="EmisCode" />
+          <ScalarProperty Name="ImportYear" ColumnName="ImportYear" />
+          <ScalarProperty Name="ImportMonth" ColumnName="ImportMonth" />
+          <ScalarProperty Name="Importday" ColumnName="Importday" />
+          <ScalarProperty Name="ImportyYr" ColumnName="ImportyYr" />
+          <ScalarProperty Name="ImportMon" ColumnName="ImportMon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
